@@ -1,0 +1,10 @@
+venv/
+__pycache__/
+*.pyc
+*.pt
+*.onnx
+.cache/
+outputs/
+*.mp4
+.streamlit/
+.DS_Store
