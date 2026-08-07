@@ -80,10 +80,10 @@ st.set_page_config(
 # Professional Professional Light/Off-White UI Styling
 CUSTOM_CSS = """
 <style>
-    /* Global Clean Styling */
+    /* Premium Dark Tech Theme */
     .stApp {
-        background-color: #f8fafc;
-        color: #1e293b;
+        background-color: #090d16;
+        color: #f1f5f9;
     }
     
     #MainMenu, footer {visibility: hidden;}
@@ -91,46 +91,68 @@ CUSTOM_CSS = """
 
     /* Hero Section */
     .hero {
-        padding: 1.5rem 1.8rem;
-        border-radius: 14px;
-        background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
-        color: #0f172a;
+        padding: 1.8rem 2rem;
+        border-radius: 16px;
+        background: linear-gradient(135deg, #111c33 0%, #0d1526 100%);
+        color: #f8fafc;
         margin-bottom: 1.5rem;
-        border: 1px solid #e2e8f0;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(56, 189, 248, 0.2);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
     }
-    .hero h1 {margin: 0; font-size: 1.75rem; font-weight: 700; color: #0f172a;}
-    .hero p {margin: 0.4rem 0 0 0; color: #475569; font-size: 0.95rem;}
+    .hero h1 {margin: 0; font-size: 1.85rem; font-weight: 700; color: #38bdf8;}
+    .hero p {margin: 0.5rem 0 0 0; color: #94a3b8; font-size: 0.98rem; line-height: 1.5;}
     
     .pill {
         display: inline-block; padding: 4px 12px; border-radius: 999px;
-        background: #e0f2fe; color: #0369a1;
-        font-size: 0.75rem; font-weight: 600; margin-right: 6px; letter-spacing: .02em;
+        background: rgba(56, 189, 248, 0.12); color: #38bdf8;
+        border: 1px solid rgba(56, 189, 248, 0.25);
+        font-size: 0.75rem; font-weight: 600; margin-right: 8px; letter-spacing: .02em;
     }
 
-    /* Metric Cards Styling */
+    /* Metric Cards */
     div[data-testid="stMetric"] {
-        background: #ffffff;
-        border: 1px solid #e2e8f0;
-        border-radius: 10px;
-        padding: 0.7rem 1rem;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+        background: #111c33;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        padding: 0.8rem 1rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
     }
-    div[data-testid="stMetricLabel"] {font-size: 0.8rem; color: #64748b; font-weight: 500;}
-    div[data-testid="stMetricValue"] {color: #0f172a; font-weight: 700;}
+    div[data-testid="stMetricLabel"] {font-size: 0.82rem; color: #94a3b8; font-weight: 500;}
+    div[data-testid="stMetricValue"] {color: #38bdf8; font-weight: 700; font-size: 1.4rem;}
 
     /* Sidebar Styling */
     section[data-testid="stSidebar"] {
-        background-color: #ffffff;
-        border-right: 1px solid #e2e8f0;
+        background-color: #0d1526;
+        border-right: 1px solid rgba(255, 255, 255, 0.06);
     }
     section[data-testid="stSidebar"] > div {padding-top: 1rem;}
+    section[data-testid="stSidebar"] .stTextInput input, section[data-testid="stSidebar"] .stSelectbox div[data-baseweb="select"] {
+        background-color: #111c33;
+        color: #f1f5f9;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
 
-    .footer-note {color: #94a3b8; font-size: 0.8rem; text-align: center; margin-top: 3rem;}
+    /* Tabs Styling */
+    .stTabs [data-baseweb="tab-list"] {
+        gap: 8px;
+        background-color: transparent;
+    }
+    .stTabs [data-baseweb="tab"] {
+        background-color: #111c33;
+        border-radius: 8px 8px 0 0;
+        color: #94a3b8;
+        padding: 10px 20px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .stTabs [aria-selected="true"] {
+        background-color: #1e293b !important;
+        color: #38bdf8 !important;
+        border-bottom: 2px solid #38bdf8 !important;
+    }
+
+    .footer-note {color: #64748b; font-size: 0.82rem; text-align: center; margin-top: 3rem;}
 </style>
 """
-st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
-
 st.markdown(
     """
     <div class="hero">
